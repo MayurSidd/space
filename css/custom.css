@@ -425,7 +425,7 @@ a {
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 615px) {
     .logo {
          position:unset;
 		 display: block;
@@ -441,7 +441,7 @@ a {
 	white-space: nowrap;
 }
 
-@media screen and (min-width: 481px){
+@media screen and (min-width: 616px){
 	.small-header:first-of-type {
 		animation: showup 7s infinite;
 	}
