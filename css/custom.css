@@ -374,26 +374,6 @@ a {
 	-o-transition: 0.5s;
 }
 
-.small-header {
-	display: inline-block;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.small-header:first-of-type {
-	animation: showup 7s infinite;
-}
-
-.small-header:last-of-type {
-	width: 0px;
-	animation: reveal 7s infinite;
-}
-
-.small-header:last-of-type span {
-	margin-left: -355px;
-	animation: slidein 7s infinite;
-}
-
 @keyframes showup {
 	0% {
 		opacity: 0;
@@ -442,5 +422,37 @@ a {
 	100% {
 		opacity: 0;
 		width: auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+         position:unset;
+		 display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  width:50%;
+    }
+}
+
+@media screen and (min-width: 481px){
+	.small-header {
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	.small-header:first-of-type {
+		animation: showup 7s infinite;
+	}
+
+	.small-header:last-of-type {
+		width: 0px;
+		animation: reveal 7s infinite;
+	}
+
+	.small-header:last-of-type span {
+		margin-left: -355px;
+		animation: slidein 7s infinite;
 	}
 }
