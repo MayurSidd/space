@@ -435,13 +435,13 @@ a {
     }
 }
 
-@media screen and (min-width: 481px){
-	.small-header {
-		display: inline-block;
-		overflow: hidden;
-		white-space: nowrap;
-	}
+.small-header {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
 
+@media screen and (min-width: 481px){
 	.small-header:first-of-type {
 		animation: showup 7s infinite;
 	}
