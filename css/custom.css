@@ -332,27 +332,20 @@ a {
 }
 
 .scroll {
-	border-radius: 25px;
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
-	color: #1b1b1b;
-	/* background:#b2b2b2; */
-	/* background:#E9204F; */
-	padding: 20px;
-	text-align: center;
-	margin: 0 0 0 0;
 	cursor: pointer;
 	transition: 0.5s;
 	-moz-transition: 0.5s;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
-	background-image: linear-gradient(to bottom, #dd1818, #333333);
+	color: #fff;
+	/* background-image: linear-gradient(to bottom, #dd1818, #333333); */
 }
 
 .scroll:hover {
 	color: #E9204F;
-	background: #1b1b1b;
 	transition: 0.5s;
 	-moz-transition: 0.5s;
 	-webkit-transition: 0.5s;
@@ -425,35 +418,31 @@ a {
 }
 
 @media screen and (max-width: 615px) {
-    .logo {
-         	position:unset;
-		 display: block;
-		  margin-left: auto;
-		  margin-right: auto;
-		  width:50%;
+	.logo {
+		position: unset;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		/* width:50%; */
 	}
-	
 	.small-header {
-		display:block;
+		display: block;
 	}
 }
 
-@media screen and (min-width: 616px){
+@media screen and (min-width: 616px) {
 	.small-header {
 		display: inline-block;
 		overflow: hidden;
 		white-space: nowrap;
 	}
-	
 	.small-header:first-of-type {
 		animation: showup 7s infinite;
 	}
-
 	.small-header:last-of-type {
 		width: 0px;
 		animation: reveal 7s infinite;
 	}
-
 	.small-header:last-of-type span {
 		margin-left: -355px;
 		animation: slidein 7s infinite;

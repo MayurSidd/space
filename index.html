@@ -11,13 +11,14 @@
 		<link rel='stylesheet' href='css/swiper.min.css'>
 		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/Footer-with-map.css">
+		<link rel="stylesheet" href="css/animation.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<title>Home || SPACE - Srila Prabhupada Academy For Cultural Education</title>
 	</head>
 	<body class="thetop">
 		<a href="https://pngtree.com/" style="display:none;">Graphics from pngtree.com</a>
 		<nav class="navbar navbar-expand-lg navbar-light">
-			<img src="images/logo.jpeg" class="logo" />
+			<a href="index.html" style="display:contents;"><img src="images/logo.jpeg" class="logo" /></a>
 			<div class="mx-auto">
 				<a class="navbar-brand text-center" href="index.html">
 					<img class="img-fluid logoheader" src="images/01.png" />Space<img class="img-fluid logoheader" src="images/02.png" />
@@ -230,14 +231,12 @@
 			</div>
 		</footer>
 		<!-- Footer -->
-
 		<div class="d-none d-sm-block">
 			<div class='scrolltop'>
-				<div class='scroll icon'><i class="fas fa-2x fa-space-shuttle fa-rotate-270"></i></div>
+				<div class='scroll icon swing-in-bottom-fwd vibrate-1'><i class="fas fa-3x fa-space-shuttle fa-rotate-270"></i></div>
 			</div>
 		</div>
 	</body>
-
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -253,14 +252,18 @@
 				background: "#f6f6f6",
 				autohidemode: false
 			});
-
+		
 			$(".scroll").click(function () {
-				$("html,body").animate({
-					scrollTop: $(".thetop").offset().top
-				}, "1000");
+				$('.scroll').addClass('slide-out-top');
+				$("html,body").animate({ scrollTop: $(".thetop").offset().top }, 1000);
+				
+				setTimeout(function(){
+					$('.scroll').removeClass('slide-out-top'); 
+				}, 1500);
+				
 				return false;
 			});
-
+		
 			var imageSwiper = new Swiper('.image-swiper', {
 				slidesPerView: 1,
 				autoplay: 4000,
@@ -269,7 +272,7 @@
 				grabCursor: true,
 				allowTouchMove: true
 			});
-
+		
 			var swiper = new Swiper('.content-swiper', {
 				pagination: '.swiper-pagination',
 				slidesPerView: 1,
@@ -287,7 +290,7 @@
 				}
 			});
 		});
-
+		
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 50) {
 				$('.scrolltop:hidden').stop(true, true).fadeIn();
