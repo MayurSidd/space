@@ -34,7 +34,8 @@ header.masthead .masthead-content {
 	position: relative
 }
 header.masthead .masthead-content .masthead-heading {
-	font-size: 4rem
+	font-size: 4rem;
+	padding-top:55px;
 }
 header.masthead .masthead-content .masthead-subheading {
 	font-size: 2rem
