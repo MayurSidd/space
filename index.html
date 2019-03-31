@@ -25,7 +25,7 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
-		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 
 		<!-- Link for Make Image Transparent: https://www.peko-step.com/en/tool/alphachannel_en.html -->
 		
@@ -45,7 +45,7 @@
 				</li>
 				
 				<li class="sidebar-nav-item liHome">
-					<a class="js-scroll-trigger" href="#page-top">Home</a>
+					<a class="js-scroll-trigger" href="#">Home</a>
 				</li>
 				
 				<li class="sidebar-nav-item">
@@ -76,9 +76,10 @@
 		$(document).ready(function () {
 			$('html').niceScroll({
 				touchbehavior: false,
-				cursorcolor: "#ff6a00",
+				cursorcolor: "#0080FF",
+				cursorborder:"1px solid rgb(0, 128, 255)",
 				cursoropacitymax: 0.5,
-				cursorwidth: 7,
+				cursorwidth: 10,
 				background: "#f6f6f6",
 				autohidemode: false
 			});
@@ -88,12 +89,13 @@
 			$('.masthead').on('click',function(e){
 				if($('#sidebar-wrapper').hasClass('active')){
 					$('#sidebar-wrapper').removeClass('active');
+					$(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
 				}
 			});
 			
 			$('.liHome').on('click',function(){
 				$('.masthead').load("views/header.html");
-				$(".masthead").show('slide', {direction:'right'}, 1000);
+				$(".masthead").show('clip', 1000);
 				$('.masthead').removeAttr('style');
 			});
 		});

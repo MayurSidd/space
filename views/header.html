@@ -10,12 +10,12 @@
 
 <script>
 	$('#anchorHome').on('click',function(e){
-		$(".masthead").hide("slide", 1000, callBack);
+		$(".masthead").hide("clip", 1000, callBack);
 	});
 	
 	function callBack(){
 		$('.masthead').load("views/about.html");		
-		$(".masthead").show('slide', {direction:'right'}, 1000);
+		$(".masthead").show('clip', 1000);
 		$('.masthead').css('background-image','linear-gradient(to right, #fff, #BADDFC)');
 	}
 </script>
