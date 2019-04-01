@@ -1,12 +1,12 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-6 col-sm-12 col-xs-12">
+		<div class="col-md-6">
 			<div class="form-group">
 				<img src="images/space-logo.png" class="img-fluid" />
 			</div>
 		</div>
 		
-		<div class="col-md-6 col-sm-12 col-xs-12">
+		<div class="col-md-6">
 			<div class="form-group text-center">
 				<h2>
 					<img src="images/heading-art-left-transparent.png" class="img-fluid header-image" />
@@ -48,10 +48,7 @@
 	});
 	
 	function callBack(){
-		<!-- $('.masthead').load("views/about.html"); -->
-		
-		<!-- setTimeout(function() { -->
-			<!-- $(".masthead").removeAttr("style").hide().fadeIn(); -->
-		<!-- }, 1000); -->
+		$('.masthead').load("views/course-level.html");		
+		$(".masthead").show('clip', 1000);
 	}
 </script>
